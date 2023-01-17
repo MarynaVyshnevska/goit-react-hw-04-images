@@ -51,7 +51,7 @@ export const App = () => {
 
   const isThereImagesOnPage = (total, page) => {
     const totalPages = Math.floor(total / PER_PAGE);
-    console.log(totalPages);
+    // console.log(totalPages);
     return page < totalPages;
     
   }
@@ -83,7 +83,10 @@ export const App = () => {
             {images.map(image => 
               <ImageGalleryItem
                 key={image.id}
-                image={image}
+                id={image.id}
+                webformatURL={image.webformatURL}
+                tags={image.tags}
+                largeImageURL={image.largeImageURL}
               />
             )}
           </ImageGallery>

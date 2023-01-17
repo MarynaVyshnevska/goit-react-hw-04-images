@@ -5,14 +5,13 @@ import { GalleryItem, GalleryItemImg } from './ImageGalleryItem.styled';
 
 import PropTypes from 'prop-types';
 
-export default function ImageGalleryItem (key, image){
+const ImageGalleryItem = ({ id, webformatURL, tags, largeImageURL }) => {
     const [showModal, setShowModal] = useState(false);
-    const { id, webformatURL, tags, largeImageURL } = image;
-    
+        // console.log({ id, webformatURL, tags, largeImageURL });
     const toggleModal = () => {
         setShowModal(!showModal);
-        console.log(showModal)
     }
+
     return (
         <>
             <GalleryItem key={id}>
@@ -33,6 +32,7 @@ export default function ImageGalleryItem (key, image){
     )
 }
 
+export default ImageGalleryItem;
 ImageGalleryItem.propTypes = {
     showModal: PropTypes.bool,
     image: PropTypes.shape({

@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 
 
 const ImageGallery = ({status, onClickLoadMore, isLoadMore, children}) => {
-    console.log('Hi');
+    // console.log('Hi');
+
     return (
         <>
             <GalleryContainer>
